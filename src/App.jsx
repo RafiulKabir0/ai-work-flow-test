@@ -336,9 +336,7 @@ export function App() {
           <p className="footer-title">{t.footerText}</p>
           <p className="footer-arch">{t.cleanArchitecture}</p>
           <div className="footer-meta">
-            <span>Participant: <strong>Rafiul Kabir</strong> (2026-001)</span>
-            <span>•</span>
-            <span>Repository: <strong>devfest-2026-001</strong></span>
+            <span>Repository: <strong>ai-work-flow-test</strong></span>
             <span>•</span>
             <span>License: <strong>MIT</strong></span>
           </div>

@@ -9,10 +9,10 @@ Registration Number:
 2026-001
 
 Live Website:
-https://devfest-2026-001.vercel.app
+https://ai-work-flow-test.vercel.app
 
 GitHub Repository:
-https://github.com/RafiulKabir0/devfest-2026-001
+https://github.com/RafiulKabir0/ai-work-flow-test
 
 ## Problem
 
@@ -98,8 +98,8 @@ The application initializes with the exact synthetic contest specification datas
 
 1. Clone repository:
    ```bash
-   git clone https://github.com/RafiulKabir0/devfest-2026-001.git
-   cd devfest-2026-001
+   git clone https://github.com/RafiulKabir0/ai-work-flow-test.git
+   cd ai-work-flow-test
    ```
 2. Install dependencies:
    ```bash
@@ -125,7 +125,7 @@ npm run preview
 ## Deployment
 
 The application is deployed on Vercel as a static single-page application:
-- Live URL: `https://devfest-2026-001.vercel.app`
+- Live URL: `https://ai-work-flow-test.vercel.app`
 - Deployed from branch `main`, matching the final contest commit.
 - Requires no backend server, authentication, or installation.
 

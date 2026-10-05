@@ -16,8 +16,8 @@ export function Header({
       <div className="header-top-banner">
         <div className="banner-content">
           <span className="live-pulse"></span>
-          <span className="banner-participant" id="participant-info">
-            {t.participantBadge}
+          <span className="banner-participant" id="workspace-status">
+            Live Workspace
           </span>
         </div>
         <div className="banner-actions">
