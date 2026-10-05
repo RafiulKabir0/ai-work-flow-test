@@ -2,12 +2,6 @@
 
 A fast, responsive, frontend-only single-page workspace for community and university organizations to track upcoming events, volunteer assignments, pending tasks, and resource shortages in real time with bilingual support (English and Bangla) and browser localStorage persistence.
 
-Participant:
-Rafiul Kabir
-
-Registration Number:
-2026-001
-
 Live Website:
 https://ai-work-flow-test.vercel.app
 
@@ -62,7 +56,7 @@ The Community Event Resource & Volunteer Tracker delivers an intuitive, fast, ze
 
 ## Data Storage
 
-Data is stored entirely on the client side using the standard browser `localStorage` API under the key `devfest_tracker_v1`.
+Data is stored entirely on the client side using the standard browser `localStorage` API under the key `ai_workflow_tracker_v1`.
 This architecture is compliant with contest rules prohibiting participant-controlled server infrastructure, databases, or online storage services. Browser storage ensures zero-latency operations, complete privacy, full offline usability, and persistence across refreshes.
 
 ## Bilingual Support

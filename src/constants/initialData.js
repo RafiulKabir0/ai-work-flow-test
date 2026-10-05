@@ -1,6 +1,6 @@
 /**
- * AI DevFest 2026 Contest - Synthetic Sample Dataset
- * Exactly matching contest specifications.
+ * Synthetic Sample Dataset
+ * Exactly matching specifications.
  * No real personal or private data.
  */
 

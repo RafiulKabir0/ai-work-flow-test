@@ -9,7 +9,7 @@ export const TRANSLATIONS = {
     appName: 'Community Event Resource & Volunteer Tracker',
     appShortName: 'EventTracker',
     appSubtitle: 'Unified organizer workspace for events, volunteers, tasks & inventory',
-    participantBadge: 'Participant: Rafiul Kabir (2026-001)',
+    workspaceStatus: 'Live Workspace',
 
     // Navigation Tabs
     navDashboard: 'Dashboard',
@@ -152,7 +152,7 @@ export const TRANSLATIONS = {
     appName: 'কমিউনিটি ইভেন্ট রিসোর্স ও ভলান্টিয়ার ট্র্যাকার',
     appShortName: 'ইভেন্ট ট্র্যাকার',
     appSubtitle: 'ইভেন্ট, স্বেচ্ছাসেবক, অসমাপ্ত কাজ ও সামগ্রী ব্যবস্থাপনার সমন্বিত ড্যাশবোর্ড',
-    participantBadge: 'অংশগ্রহণকারী: রাফিউল কবির (২০২৬-০০১)',
+    workspaceStatus: 'লাইভ ওয়ার্কস্পেস',
 
     // Navigation Tabs
     navDashboard: 'ড্যাশবোর্ড',

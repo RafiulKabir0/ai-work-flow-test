@@ -1,14 +1,14 @@
 import { INITIAL_EVENTS, INITIAL_ASSIGNMENTS, INITIAL_RESOURCES } from '../constants/initialData';
 
-const STORAGE_KEY = 'devfest_tracker_v1';
-const PREFS_KEY = 'devfest_tracker_prefs_v1';
+const STORAGE_KEY = 'ai_workflow_tracker_v1';
+const PREFS_KEY = 'ai_workflow_tracker_prefs_v1';
 
 /**
  * Loads application state from localStorage or initializes with sample data
  */
 export function loadAppState() {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const raw = localStorage.getItem(STORAGE_KEY) || localStorage.getItem('devfest_tracker_v1');
     if (!raw) {
       const initial = {
         version: 1,
@@ -59,7 +59,7 @@ export function saveAppState(state) {
  */
 export function loadPreferences() {
   try {
-    const raw = localStorage.getItem(PREFS_KEY);
+    const raw = localStorage.getItem(PREFS_KEY) || localStorage.getItem('devfest_tracker_prefs_v1');
     if (!raw) {
       return { lang: 'en', theme: 'light' };
     }
@@ -106,7 +106,7 @@ export function exportToJSON(data) {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `devfest_tracker_backup_${new Date().toISOString().slice(0, 10)}.json`;
+  a.download = `event_tracker_backup_${new Date().toISOString().slice(0, 10)}.json`;
   a.click();
   URL.revokeObjectURL(url);
 }

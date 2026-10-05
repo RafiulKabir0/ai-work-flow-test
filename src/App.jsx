@@ -178,8 +178,7 @@ export function App() {
     exportToJSON({
       version: 1,
       exportedAt: new Date().toISOString(),
-      participant: 'Rafiul Kabir',
-      registrationNumber: '2026-001',
+      appName: 'ai-work-flow-test',
       events,
       assignments,
       resources,

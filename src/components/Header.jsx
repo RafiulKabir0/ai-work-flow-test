@@ -17,7 +17,7 @@ export function Header({
         <div className="banner-content">
           <span className="live-pulse"></span>
           <span className="banner-participant" id="workspace-status">
-            Live Workspace
+            {t.workspaceStatus}
           </span>
         </div>
         <div className="banner-actions">

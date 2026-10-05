@@ -15,7 +15,7 @@ I selected **React 18 with Vite** because:
 ---
 
 ### 2. Where is application data stored?
-All application data is stored purely in the user's browser via the standard **HTML5 `localStorage` API** under the key `devfest_tracker_v1` (with user interface preferences stored under `devfest_tracker_prefs_v1`). No data is sent to or stored on any server or cloud database.
+All application data is stored purely in the user's browser via the standard **HTML5 `localStorage` API** under the key `ai_workflow_tracker_v1` (with user interface preferences stored under `ai_workflow_tracker_prefs_v1`). No data is sent to or stored on any server or cloud database.
 
 ---
 
@@ -78,7 +78,7 @@ export function calculateActiveVolunteers(events, assignments) {
 
 ### 6. What happens after refresh?
 When the page reloads:
-1. `loadAppState()` in `src/services/storage.js` reads `localStorage.getItem('devfest_tracker_v1')`.
+1. `loadAppState()` in `src/services/storage.js` reads `localStorage.getItem('ai_workflow_tracker_v1')`.
 2. It parses the stored JSON, validates schema integrity, and restores events, volunteer assignments, and resources.
 3. If no data exists (first visit), it safely seeds the exact initial contest sample data.
 4. Any user-created events, modified assignments, or edited quantities remain intact.
