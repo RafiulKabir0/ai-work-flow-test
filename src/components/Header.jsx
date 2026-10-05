@@ -16,8 +16,6 @@ export function Header({
       <div className="header-top-banner">
         <div className="banner-content">
           <span className="live-pulse"></span>
-          <span className="banner-contest">AI DevFest 2026 Simulation</span>
-          <span className="banner-divider">•</span>
           <span className="banner-participant" id="participant-info">
             {t.participantBadge}
           </span>

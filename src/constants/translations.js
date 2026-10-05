@@ -143,7 +143,7 @@ export const TRANSLATIONS = {
     rulePersistence: 'Persistence: Saved in browser localStorage (survives refresh and language toggle)',
 
     // Footer
-    footerText: 'AI DevFest 2026 Practice Simulation — Community Event Resource & Volunteer Tracker',
+    footerText: 'Community Event Resource & Volunteer Tracker',
     cleanArchitecture: 'Client-Only Architecture • Zero Backend • Browser LocalStorage Persistence'
   },
 
@@ -286,7 +286,7 @@ export const TRANSLATIONS = {
     rulePersistence: 'স্থায়িত্ব: ব্রাউজার localStorage-এ সংরক্ষিত (রিফ্রেশ এবং ভাষা পরিবর্তনে অবিকৃত থাকে)',
 
     // Footer
-    footerText: 'এআই ডেভফেস্ট ২০২৬ অনুশীলন সিমুলেশন — কমিউনিটি ইভেন্ট রিসোর্স ও ভলান্টিয়ার ট্র্যাকার',
+    footerText: 'কমিউনিটি ইভেন্ট রিসোর্স ও ভলান্টিয়ার ট্র্যাকার',
     cleanArchitecture: 'ক্লায়েন্ট-অনলি আর্কিটেকচার • ব্যাকএন্ডবিহীন • ব্রাউজার লোকাল স্টোরেজ নির্ভর'
   }
 };

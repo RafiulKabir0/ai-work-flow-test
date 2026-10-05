@@ -3,7 +3,6 @@
 **Participant:** Rafiul Kabir  
 **Registration Number:** 2026-001  
 **Project:** Community Event Resource & Volunteer Tracker  
-**Simulation:** AI DevFest 2026 Practice Simulation  
 
 ---
 
