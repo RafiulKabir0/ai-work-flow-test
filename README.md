@@ -12,7 +12,7 @@ Live Website:
 https://devfest-2026-001.vercel.app
 
 GitHub Repository:
-https://github.com/rafiul-kabir/devfest-2026-001
+https://github.com/RafiulKabir0/devfest-2026-001
 
 ## Problem
 
@@ -98,7 +98,7 @@ The application initializes with the exact synthetic contest specification datas
 
 1. Clone repository:
    ```bash
-   git clone https://github.com/rafiul-kabir/devfest-2026-001.git
+   git clone https://github.com/RafiulKabir0/devfest-2026-001.git
    cd devfest-2026-001
    ```
 2. Install dependencies:
