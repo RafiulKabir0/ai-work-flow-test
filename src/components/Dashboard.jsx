@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Users, Clock, AlertTriangle, ArrowRight, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Calendar, Users, Clock, AlertTriangle, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
 
 export function Dashboard({
   metrics,
@@ -26,7 +26,7 @@ export function Dashboard({
   return (
     <section className="dashboard-section" aria-label="Dashboard Overview">
       <div className="section-header">
-        <div>
+        <div className="section-title-wrap">
           <h2 className="section-title">{t.navDashboard}</h2>
           <p className="section-subtitle">{t.appSubtitle}</p>
         </div>
@@ -44,17 +44,26 @@ export function Dashboard({
           <div className="metric-header">
             <span className="metric-title">{t.metricTotalEvents}</span>
             <div className="metric-icon-box icon-events">
-              <Calendar size={22} />
+              <Calendar size={18} />
             </div>
           </div>
-          <div className="metric-value" id="metric-total-events-val">
+          <div className="metric-value font-tabular" id="metric-total-events-val">
             {metrics.totalEvents}
           </div>
           <p className="metric-desc">{t.metricTotalEventsDesc}</p>
           <div className="metric-pills">
-            <span className="pill pill-active">{activeEventsCount} {t.statusActive}</span>
-            <span className="pill pill-upcoming">{upcomingEventsCount} {t.statusUpcoming}</span>
-            <span className="pill pill-completed">{completedEventsCount} {t.statusCompleted}</span>
+            <span className="pill pill-active">
+              <span className="pill-dot pill-dot-active" aria-hidden="true"></span>
+              {activeEventsCount} {t.statusActive}
+            </span>
+            <span className="pill pill-upcoming">
+              <span className="pill-dot pill-dot-upcoming" aria-hidden="true"></span>
+              {upcomingEventsCount} {t.statusUpcoming}
+            </span>
+            <span className="pill pill-completed">
+              <span className="pill-dot pill-dot-completed" aria-hidden="true"></span>
+              {completedEventsCount} {t.statusCompleted}
+            </span>
           </div>
           <button
             type="button"
@@ -78,16 +87,22 @@ export function Dashboard({
           <div className="metric-header">
             <span className="metric-title">{t.metricActiveVolunteers}</span>
             <div className="metric-icon-box icon-volunteers">
-              <Users size={22} />
+              <Users size={18} />
             </div>
           </div>
-          <div className="metric-value" id="metric-active-volunteers-val">
+          <div className="metric-value font-tabular" id="metric-active-volunteers-val">
             {metrics.activeVolunteers}
           </div>
           <p className="metric-desc">{t.metricActiveVolunteersDesc}</p>
           <div className="metric-pills">
-            <span className="pill pill-confirmed">{confirmedAssignmentsCount} {t.statusConfirmed}</span>
-            <span className="pill pill-completed">{completedAssignmentsCount} {t.statusCompleted}</span>
+            <span className="pill pill-confirmed">
+              <span className="pill-dot pill-dot-confirmed" aria-hidden="true"></span>
+              {confirmedAssignmentsCount} {t.statusConfirmed}
+            </span>
+            <span className="pill pill-completed">
+              <span className="pill-dot pill-dot-completed" aria-hidden="true"></span>
+              {completedAssignmentsCount} {t.statusCompleted}
+            </span>
           </div>
           <button
             type="button"
@@ -102,7 +117,7 @@ export function Dashboard({
 
         {/* Metric 3: Pending Tasks */}
         <div
-          className={`metric-card metric-tasks ${metrics.pendingTasks > 0 ? 'card-highlight-warning' : ''}`}
+          className={`metric-card metric-tasks ${metrics.pendingTasks > 0 ? 'card-has-pending' : ''}`}
           id="metric-pending-tasks-card"
           tabIndex={0}
           role="region"
@@ -111,15 +126,18 @@ export function Dashboard({
           <div className="metric-header">
             <span className="metric-title">{t.metricPendingTasks}</span>
             <div className="metric-icon-box icon-tasks">
-              <Clock size={22} />
+              <Clock size={18} />
             </div>
           </div>
-          <div className="metric-value" id="metric-pending-tasks-val">
+          <div className="metric-value font-tabular" id="metric-pending-tasks-val">
             {metrics.pendingTasks}
           </div>
           <p className="metric-desc">{t.metricPendingTasksDesc}</p>
           <div className="metric-pills">
-            <span className="pill pill-pending">{metrics.pendingTasks} {t.statusPending}</span>
+            <span className="pill pill-pending">
+              <span className="pill-dot pill-dot-pending" aria-hidden="true"></span>
+              {metrics.pendingTasks} {t.statusPending}
+            </span>
           </div>
           <button
             type="button"
@@ -137,7 +155,7 @@ export function Dashboard({
 
         {/* Metric 4: Resource Shortages */}
         <div
-          className={`metric-card metric-shortages ${metrics.resourceShortages > 0 ? 'card-highlight-danger' : ''}`}
+          className={`metric-card metric-shortages ${metrics.resourceShortages > 0 ? 'card-has-shortage' : ''}`}
           id="metric-resource-shortages-card"
           tabIndex={0}
           role="region"
@@ -146,16 +164,22 @@ export function Dashboard({
           <div className="metric-header">
             <span className="metric-title">{t.metricResourceShortages}</span>
             <div className="metric-icon-box icon-shortages">
-              <AlertTriangle size={22} />
+              <AlertTriangle size={18} />
             </div>
           </div>
-          <div className="metric-value" id="metric-resource-shortages-val">
+          <div className="metric-value font-tabular" id="metric-resource-shortages-val">
             {metrics.resourceShortages}
           </div>
           <p className="metric-desc">{t.metricResourceShortagesDesc}</p>
           <div className="metric-pills">
-            <span className="pill pill-shortage">{metrics.resourceShortages} {t.statusShortage}</span>
-            <span className="pill pill-sufficient">{sufficientResourcesCount} {t.statusSufficient}</span>
+            <span className="pill pill-shortage">
+              <span className="pill-dot pill-dot-shortage" aria-hidden="true"></span>
+              {metrics.resourceShortages} {t.statusShortage}
+            </span>
+            <span className="pill pill-sufficient">
+              <span className="pill-dot pill-dot-sufficient" aria-hidden="true"></span>
+              {sufficientResourcesCount} {t.statusSufficient}
+            </span>
           </div>
           <button
             type="button"
@@ -176,16 +200,26 @@ export function Dashboard({
       <div className="dashboard-summary-banner">
         <div className="summary-col">
           <div className="summary-title">
-            <CheckCircle2 size={16} className="text-success" />
+            <ShieldCheck size={18} className="text-primary-accent" />
             <span>{t.businessRulesTitle}</span>
           </div>
-          <ul className="summary-list">
-            <li><strong>{t.statusShortage}:</strong> {t.ruleShortage}</li>
-            <li><strong>{t.metricPendingTasks}:</strong> {t.rulePending}</li>
-            <li><strong>{t.metricActiveVolunteers}:</strong> {t.ruleActiveVolunteers}</li>
-          </ul>
+          <div className="summary-grid">
+            <div className="summary-rule-item">
+              <span className="rule-badge badge-shortage">{t.statusShortage}</span>
+              <p className="rule-text">{t.ruleShortage}</p>
+            </div>
+            <div className="summary-rule-item">
+              <span className="rule-badge badge-pending">{t.metricPendingTasks}</span>
+              <p className="rule-text">{t.rulePending}</p>
+            </div>
+            <div className="summary-rule-item">
+              <span className="rule-badge badge-active">{t.metricActiveVolunteers}</span>
+              <p className="rule-text">{t.ruleActiveVolunteers}</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 }
+

@@ -221,12 +221,13 @@ export function EventSection({
                     </td>
                     <td>
                       <span className={`status-badge ${getStatusBadgeClass(evt.status)}`}>
-                        {getStatusLabel(evt.status)}
+                        <span className="badge-dot" aria-hidden="true"></span>
+                        <span>{getStatusLabel(evt.status)}</span>
                       </span>
                     </td>
                     <td>
                       <span className="volunteer-count-badge">
-                        <Users size={14} />
+                        <Users size={13} />
                         <span>{assignedCount}</span>
                       </span>
                     </td>

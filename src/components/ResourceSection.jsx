@@ -348,14 +348,14 @@ export function ResourceSection({
             <div className="form-calc-preview">
               <span className="preview-label">{t.shortageStatus}:</span>
               {Number(formAvailable) < Number(formRequired) ? (
-                <span className="badge-shortage inline-flex-center gap-1">
+                <span className="status-badge badge-shortage inline-flex-center gap-1">
                   <AlertTriangle size={13} />
-                  <span>{t.statusShortage} (Deficit: {Number(formRequired) - Number(formAvailable)})</span>
+                  <span>{t.statusShortage} (-{Number(formRequired) - Number(formAvailable)})</span>
                 </span>
               ) : (
-                <span className="badge-sufficient inline-flex-center gap-1">
+                <span className="status-badge badge-sufficient inline-flex-center gap-1">
                   <CheckCircle2 size={13} />
-                  <span>{t.statusSufficient} (Surplus: {Number(formAvailable) - Number(formRequired)})</span>
+                  <span>{t.statusSufficient}</span>
                 </span>
               )}
             </div>

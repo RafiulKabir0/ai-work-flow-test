@@ -119,3 +119,32 @@ test('7. Bilingual Key Equivalence Check', () => {
     assert.ok(typeof TRANSLATIONS.bn[key] === 'string' && TRANSLATIONS.bn[key].length > 0, `Bangla key ${key} must not be empty`);
   }
 });
+
+test('8. Active Volunteers Exclusion Rules', () => {
+  // If an event is Completed, its volunteers are NOT active even if Confirmed
+  const testEvents = [
+    { id: 'e1', name: 'Completed Event', status: 'Completed' },
+    { id: 'e2', name: 'Upcoming Event', status: 'Upcoming' },
+    { id: 'e3', name: 'Active Event', status: 'Active' },
+  ];
+  const testAssignments = [
+    { id: 'a1', eventId: 'e1', volunteerName: 'Vol 1', status: 'Confirmed' },
+    { id: 'a2', eventId: 'e2', volunteerName: 'Vol 2', status: 'Confirmed' },
+    { id: 'a3', eventId: 'e3', volunteerName: 'Vol 3', status: 'Confirmed' },
+    { id: 'a4', eventId: 'e3', volunteerName: 'Vol 4', status: 'Completed' },
+    { id: 'a5', eventId: 'e3', volunteerName: 'Vol 5', status: 'Pending' },
+  ];
+
+  // In testEvents, only e3 is Active.
+  // In e3, a3 is Confirmed (counts), a4 is Completed (excluded), a5 is Pending (counts).
+  const activeCount = calculateActiveVolunteers(testEvents, testAssignments);
+  assert.strictEqual(activeCount, 2, 'Only Confirmed & Pending volunteers in Active events count as Active Volunteers');
+});
+
+test('9. Assigned Volunteers Count per Event', () => {
+  const evt = INITIAL_EVENTS.find((e) => e.name === 'Campus Career Fair');
+  assert.ok(evt, 'Campus Career Fair must exist');
+  const count = getAssignedVolunteerCount(evt, INITIAL_ASSIGNMENTS);
+  assert.strictEqual(count, 2, 'Campus Career Fair has Asha Rahman and Tanvir Hasan assigned');
+});
+

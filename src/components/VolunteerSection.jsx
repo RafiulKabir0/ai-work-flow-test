@@ -263,7 +263,9 @@ export function VolunteerSection({
                       title={`${t.quickStatusChange}: ${getStatusLabel(asg.status)} (click to cycle)`}
                       id={`cycle-status-btn-${asg.id}`}
                     >
+                      <span className="badge-dot" aria-hidden="true"></span>
                       <span>{getStatusLabel(asg.status)}</span>
+                      <span className="badge-cycle-indicator" aria-hidden="true">↻</span>
                     </button>
                   </td>
                   <td className="text-right">
